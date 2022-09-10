@@ -1,10 +1,15 @@
 package com.aplication.inventorysystem.service;
 
-import com.aplication.inventorysystem.model.User;
+import com.aplication.inventorysystem.model.Users;
 
 import java.util.List;
 
 public interface UserService {
-    public User saveUser(User user);
-    public List<User> getAllUsers();
+    Users save(Users users);
+
+    List<Users> getAll();
+
+    void update(Users product);
+
+    void delete(Long id);
 }

@@ -1,6 +1,5 @@
 package com.aplication.inventorysystem.model;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,32 +8,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import java.util.Date;
-import java.util.List;
 
 @Entity
 @Getter
 @Setter
-public class Sale {
-
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NotBlank
-    private Long userId;
+    private String identification;
     @NotBlank
-    private Long productId;
+    private String name;
     @NotBlank
-    private String productCode;
+    private String lastname;
     @NotBlank
-    private float price;
+    private String email;
     @NotBlank
-    private int units;
+    private String pass;
     @NotBlank
-    private float discount;
-    @NotBlank
-    private float total;
-    @NotNull
-    private Date date;
+    private String role;
 }

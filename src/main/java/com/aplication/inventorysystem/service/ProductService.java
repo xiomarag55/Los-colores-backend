@@ -1,15 +1,20 @@
 package com.aplication.inventorysystem.service;
 
 
+import com.aplication.inventorysystem.dtos.ProductDto;
 import com.aplication.inventorysystem.model.Product;
-import com.aplication.inventorysystem.model.User;
 
 import java.util.List;
 
 public interface ProductService {
 
-    public Product saveProduct(Product product);
-    public List<Product> getAllProducts();
+    ProductDto save(ProductDto product);
 
+    ProductDto getByCode(String code);
 
+    List<ProductDto> getAll();
+
+    void update(ProductDto product);
+
+    void delete(Long id);
 }
